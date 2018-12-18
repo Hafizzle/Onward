@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1018361620658",
+    "firebase_url": "https://onward-wego.firebaseio.com",
+    "project_id": "onward-wego",
+    "storage_bucket": "onward-wego.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018361620658:android:3f38917e7dbc453d",
+        "android_client_info": {
+          "package_name": "com.hafizzle.onward"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018361620658-4pcechtil7o2oq49fqnte5gk6r97u33j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hafizzle.onward",
+            "certificate_hash": "2e4c99da19cdfe112c8cdc03a40b2dbf9f672731"
+          }
+        },
+        {
+          "client_id": "1018361620658-82icphq200jsqlqn59idpomd589glb7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh7UcZw-oy7y_EctY06QIq6IVP2aBLpGc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018361620658-82icphq200jsqlqn59idpomd589glb7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
