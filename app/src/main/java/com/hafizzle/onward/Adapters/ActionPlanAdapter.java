@@ -11,25 +11,27 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.hafizzle.onward.Objects.ActionPlan;
 import com.hafizzle.onward.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ActionPlanAdapter extends RecyclerView.Adapter<SprintAdapter.ViewHolder>{
+public class ActionPlanAdapter extends RecyclerView.Adapter<ActionPlanAdapter.ViewHolder>{
 
     private static final String TAG = "SprintAdapter";
-    ArrayList<Sprint> sprints = new ArrayList<>();
+    List<ActionPlan> actionPlans = new ArrayList<>();
     private Context context;
 
 
-    public SprintAdapter(ArrayList<Sprint> sprints, Context context) {
-        this.sprints = sprints;
+    public ActionPlanAdapter(ArrayList<ActionPlan> actionPlans, Context context) {
+        this.actionPlans = actionPlans;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.sprint_cardview, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -38,11 +40,11 @@ public class ActionPlanAdapter extends RecyclerView.Adapter<SprintAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: called.");
 
-        holder.sprintImage.setImageDrawable(sprints.get(position).getSprintImage());
-        holder.sprintName.setText(sprints.get(position).getSprintName());
-        holder.owner.setText(sprints.get(position).getOwner());
-        holder.buddyOne.setText(sprints.get(position).getBuddyOne());
-        holder.buddyTwo.setText(sprints.get(position).getBuddyTwo());
+        holder.sprintImage.setImageDrawable(actionPlans.get(position).getSprintImage());
+        holder.sprintName.setText(actionPlans.get(position).getSprintName());
+        holder.owner.setText(actionPlans.get(position).getOwner());
+        holder.buddyOne.setText(actionPlans.get(position).getBuddyOne());
+        holder.buddyTwo.setText(actionPlans.get(position).getBuddyTwo());
 
     }
 

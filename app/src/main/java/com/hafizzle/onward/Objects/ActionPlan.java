@@ -1,15 +1,39 @@
 package com.hafizzle.onward.Objects;
 
-public interface ActionPlan {
-    //Name of the action
-    void actionName(String action);
+public class ActionPlan {
 
-    //How often should user(s) update the action
-    void progressUpdates(int updateLength);
+    private String actionName;
+    private int updateLength;
+    private Boolean termination;
+    private int actionLength;
 
-    //Should the action be terminated if the progressUpdates are not on time?
-    void actionTermination(boolean termination);
+    public ActionPlan(String actionName, int updateLength, Boolean termination, int actionLength) {
+        this.actionName = actionName;
+        this.updateLength = updateLength;
+        this.termination = termination;
+        this.actionLength = actionLength;
+    }
 
-    //What is the total length the action should be?
-    void actionLength(int actionLength);
+    public ActionPlan(String actionName, int updateLength, int actionLength) {
+        this.actionName = actionName;
+        this.updateLength = updateLength;
+        this.actionLength = actionLength;
+        this.termination = false;
+    }
+
+    public void setActionName(String actionName) {
+        this.actionName = actionName;
+    }
+
+    public void setUpdateLength(int updateLength) {
+        this.updateLength = updateLength;
+    }
+
+    public void setTermination(Boolean termination) {
+        this.termination = termination;
+    }
+
+    public void setActionLength(int actionLength) {
+        this.actionLength = actionLength;
+    }
 }
