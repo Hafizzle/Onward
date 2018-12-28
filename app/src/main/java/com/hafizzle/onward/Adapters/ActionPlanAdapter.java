@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,7 +25,7 @@ public class ActionPlanAdapter extends RecyclerView.Adapter<ActionPlanAdapter.Vi
     private Context context;
 
 
-    public ActionPlanAdapter(ArrayList<ActionPlan> actionPlans, Context context) {
+    public ActionPlanAdapter(List<ActionPlan> actionPlans, Context context) {
         this.actionPlans = actionPlans;
         this.context = context;
     }
@@ -40,35 +41,33 @@ public class ActionPlanAdapter extends RecyclerView.Adapter<ActionPlanAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: called.");
 
-        holder.sprintImage.setImageDrawable(actionPlans.get(position).getSprintImage());
-        holder.sprintName.setText(actionPlans.get(position).getSprintName());
-        holder.owner.setText(actionPlans.get(position).getOwner());
-        holder.buddyOne.setText(actionPlans.get(position).getBuddyOne());
-        holder.buddyTwo.setText(actionPlans.get(position).getBuddyTwo());
+        //holder.selectedImage.setImageDrawable(actionPlans.get(position).get()); // ToDo need to generate lots of free to use stock images that people can choose and categorize from.
+        holder.planTitle.setText(actionPlans.get(position).getActionName());
+        holder.participant1.setText(actionPlans.get(position).getParticipant1());
+        holder.participant2.setText(actionPlans.get(position).getParticipant2());
+
 
     }
 
     @Override
     public int getItemCount() {
-        return sprints.size();
+        return actionPlans.size();
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView sprintImage;
-        TextView sprintName;
-        TextView owner;
-        TextView buddyOne;
-        TextView buddyTwo;
+        //ImageView selectedImage;
+        TextView planTitle;
+        TextView participant1;
+        TextView participant2;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            sprintImage = itemView.findViewById(R.id.sprintImage);
-            sprintName = itemView.findViewById(R.id.sprintName);
-            owner = itemView.findViewById(R.id.owner);
-            buddyOne = itemView.findViewById(R.id.buddyOne);
-            buddyTwo = itemView.findViewById(R.id.buddyTwo);
+            //selectedImage = itemView.findViewById(R.id.selectedImage);
+            planTitle = itemView.findViewById(R.id.planTitle);
+            participant1 = itemView.findViewById(R.id.participant1);
+            participant2 = itemView.findViewById(R.id.participant2);
         }
     }
 

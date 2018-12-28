@@ -6,8 +6,9 @@ public class MarathonPlan extends ActionPlan {
     private int updateLength;
     private int actionLength;
 
-    public MarathonPlan(String actionName, int updateLength, Boolean termination, int actionLength) {
-        super(actionName, updateLength, termination, actionLength);
+    public MarathonPlan(String actionName, int updateLength, Boolean termination, int actionLength,
+                        String participant1, String participant2) {
+        super(actionName, updateLength, termination, actionLength, participant1, participant2);
     }
 
 }

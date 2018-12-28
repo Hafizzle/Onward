@@ -7,8 +7,8 @@ public class SprintPlan extends ActionPlan {
     private Boolean termination;
     private int actionLength;
 
-    public SprintPlan(String actionName, int updateLength, Boolean termination, int actionLength) {
-        super(actionName, updateLength, termination, actionLength);
+    public SprintPlan(String actionName, int updateLength, Boolean termination, int actionLength, String participant1, String participant2) {
+        super(actionName, updateLength, termination, actionLength, participant1, participant2);
     }
 
 
